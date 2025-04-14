@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
-import './Contact.css';
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -37,7 +36,7 @@ export default function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      className="contact-section"
+      className="p-10 bg-gray-100 dark:bg-gray-800 text-center text-gray-900 dark:text-white scroll-mt-24"
       initial="hidden"
       animate={controls}
       variants={{
@@ -45,31 +44,34 @@ export default function Contact() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="contact-title">Contact</h3>
-      <form onSubmit={handleSubmit} className="contact-form">
+      <h3 className="text-2xl font-semibold mb-4">Contact</h3>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md mx-auto items-center">
         <input
           type="text"
           placeholder="Nom"
+          className="border rounded p-2 w-full"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="email"
           placeholder="Email"
+          className="border rounded p-2 w-full"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Message"
+          className="border rounded p-2 h-32 w-full"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        {error && <p className="form-error">{error}</p>}
+        {error && <p className="text-red-500 text-sm">{error}</p>}
         <AnimatePresence>
           {success && (
             <motion.p
               key="success"
-              className="form-success"
+              className="text-green-600 text-sm font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -79,7 +81,12 @@ export default function Contact() {
             </motion.p>
           )}
         </AnimatePresence>
-        <button type="submit">Envoyer</button>
+        <button
+          type="submit"
+          className="bg-purple-500 text-white p-2 rounded hover:bg-purple-600 w-full"
+        >
+          Envoyer
+        </button>
       </form>
     </motion.section>
   );

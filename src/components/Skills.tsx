@@ -29,7 +29,7 @@ export default function Skills() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="text-2xl font-semibold mb-6 text-center">Compétences</h3>
+      <h3 className="text-3xl font-semibold mb-6 text-center">Compétences</h3>
 
       {/* Langages que j'utilise */}
       <div className="mb-12">

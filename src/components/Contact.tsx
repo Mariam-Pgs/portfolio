@@ -36,7 +36,11 @@ export default function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      className="p-10 bg-gray-100 dark:bg-gray-800 text-center text-gray-900 dark:text-white scroll-mt-24"
+      style={{
+        padding: "4rem 2rem",
+        backgroundColor: "#f5f5f5",
+        textAlign: "center",
+      }}
       initial="hidden"
       animate={controls}
       variants={{
@@ -44,34 +48,45 @@ export default function Contact() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="text-2xl font-semibold mb-4">Contact</h3>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md mx-auto items-center">
+<h3 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1.5rem" }}>Contact</h3>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          maxWidth: "500px",
+          margin: "0 auto",
+        }}
+      >
         <input
           type="text"
           placeholder="Nom"
-          className="border rounded p-2 w-full"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          style={inputStyle}
         />
         <input
           type="email"
           placeholder="Email"
-          className="border rounded p-2 w-full"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={inputStyle}
         />
         <textarea
           placeholder="Message"
-          className="border rounded p-2 h-32 w-full"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          style={{ ...inputStyle, minHeight: "100px", resize: "vertical" }}
         />
-        {error && <p className="text-red-500 text-sm">{error}</p>}
+        {error && (
+          <p style={{ color: "red", fontSize: "0.9rem" }}>{error}</p>
+        )}
         <AnimatePresence>
           {success && (
             <motion.p
               key="success"
-              className="text-green-600 text-sm font-medium"
+              style={{ color: "green", fontSize: "0.9rem", fontWeight: 500 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -83,7 +98,15 @@ export default function Contact() {
         </AnimatePresence>
         <button
           type="submit"
-          className="bg-purple-500 text-white p-2 rounded hover:bg-purple-600 w-full"
+          style={{
+            backgroundColor: "#9333ea",
+            color: "white",
+            padding: "0.8rem",
+            border: "none",
+            borderRadius: "8px",
+            fontSize: "1rem",
+            cursor: "pointer",
+          }}
         >
           Envoyer
         </button>
@@ -91,3 +114,12 @@ export default function Contact() {
     </motion.section>
   );
 }
+
+const inputStyle = {
+  width: "100%",
+  padding: "0.8rem",
+  border: "1px solid #ccc",
+  borderRadius: "8px",
+  fontSize: "1rem",
+  fontFamily: "inherit",
+};

@@ -11,10 +11,10 @@ export default function Hero() {
      <br>
     
      </br>
-     <p className="text-lg text-gray-700 max-w-xl">
+     <p className="text-2xl text-gray-700 mb-6">
        Étudiante en 1ᵉ année de BUT Informatique à Aix-en-Provence, passionnée par le développement web et le design UX/UI,
      </p>
-     <p className="text-lg text-purple-600 font-semibold max-w-xl">
+     <p className="text-2xl text-purple-600 font-semibold">
        Je suis actuellement à la recherche d’une alternance en développement front-end pour ma 2ᵉ et 3ᵉ année.
      </p>
    </section>

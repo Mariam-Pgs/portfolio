@@ -32,8 +32,8 @@ export default function Skills() {
       <h3 className="text-3xl font-semibold mb-10 text-center">Compétences</h3>
 
       {/* Langages que j'utilise */}
-      <div className="mb-12">
-        <h4 className="text-xl font-semibold mb-4 text-center">💻 Langages que j’utilise</h4>
+      <div className="mb-15">       {/* espacement entre section languages et section outils */}
+        <h4 className="text-xl font-semibold mb-8 text-center">💻 Langages que j’utilise</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <SkillBox icon={<FaHtml5 />} label="HTML" />
           <SkillBox icon={<FaCss3Alt />} label="CSS" />
@@ -50,7 +50,7 @@ export default function Skills() {
 
       {/* Outils que j’utilise */}
       <div>
-        <h4 className="text-xl font-semibold mb-4 text-center">🛠️ Outils que j’utilise</h4>
+        <h4 className="text-xl font-semibold mb-8 text-center">🛠️ Outils que j’utilise</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <SkillBox icon={<FaFigma />} label="Figma" />
           <SkillBox icon={<FaGithub />} label="GitHub" />

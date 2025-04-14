@@ -27,19 +27,19 @@ export default function About() {
 
       <div className="max-w-4xl mx-auto px-4">
 
-      <p className="mb-6 text-center">
+      <p className="mb-6 text-center text-2xl">
         Étudiante en BUT Informatique passionnée par le développement web et le design UX/UI, je suis actuellement à la recherche d’une alternance dans le développement front-end à partir de septembre 2025.
       </p>
 
-      <p className="mb-10 text-center">
+      <p className="mb-15 text-center text-2xl">
         Curieuse, créative et toujours motivée pour apprendre, j’aime concevoir des interfaces modernes, accessibles et centrées sur l’utilisateur.
       </p>
 
       </div>
 
 
-      <div className="mt-6 w-full">
-        <h3 className="text-2xl font-semibold mb-4 text-center">Formation</h3>
+      <div className="mt-6 w-full text-2xl">
+        <h3 className="text-3xl font-semibold mb-4 text-center">Formation</h3>
         <ul className="space-y-2 text-center">
           <li>
             <strong>BUT Informatique</strong> – IUT d'Aix-en-Provence, 2025 – 2027

@@ -13,9 +13,12 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur z-50 shadow-sm flex justify-between items-center px-8 py-4">
-      <h1 className="text-xl font-bold cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        Mariam Poghossian
-      </h1>
+<h1
+  className="text-xl font-bold cursor-pointer hover:text-purple-600 hover:drop-shadow-[0_0_15px_rgba(147,51,234,0.8)] transition duration-300"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+>
+  Mariam Poghossian
+</h1>
       <ul className="flex gap-6 text-sm">
         <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="hover:text-purple-600">À propos</a></li>
         <li><a href="#skills" onClick={(e) => handleScroll(e, "skills")} className="hover:text-purple-600">Compétences</a></li>

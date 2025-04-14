@@ -43,7 +43,7 @@ export default function Skills() {
           <SkillBox icon={<FaPython />} label="Python" />
           <SkillBox icon={<FaJava />} label="Java" />
           <SkillBox icon={<SiCplusplus />} label="C++" />
-          <SkillBox icon={<FaPhp />} label="PHP" />
+          <SkillBox icon={<FaJava />} label="JavaFX" />
           <SkillBox icon={<FaDatabase />} label="Oracle SQL" />
         </div>
       </div>

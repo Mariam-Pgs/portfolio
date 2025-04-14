@@ -21,7 +21,7 @@ export default function Skills() {
     <motion.section
       ref={ref}
       id="skills"
-      className="p-10 bg-gray-100 text-gray-900 scroll-mt-24"
+      className="p-10 bg-gray-100 text-gray-900 scroll-mt-20"
       initial="hidden"
       animate={controls}
       variants={{
@@ -29,7 +29,7 @@ export default function Skills() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="text-3xl font-semibold mb-6 text-center">Compétences</h3>
+      <h3 className="text-3xl font-semibold mb-10 text-center">Compétences</h3>
 
       {/* Langages que j'utilise */}
       <div className="mb-12">

@@ -12,7 +12,7 @@ export default function Hero() {
     
      </br>
      <p className="text-lg text-gray-700 max-w-xl">
-       Étudiante en 1ᵉ année de BUT Informatique à Aix-en-Provence, passionnée par le développement web et le design UX/UI.
+       Étudiante en 1ᵉ année de BUT Informatique à Aix-en-Provence, passionnée par le développement web et le design UX/UI,
      </p>
      <p className="text-lg text-purple-600 font-semibold max-w-xl">
        Je suis actuellement à la recherche d’une alternance en développement front-end pour ma 2ᵉ et 3ᵉ année.

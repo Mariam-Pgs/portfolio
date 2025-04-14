@@ -26,13 +26,7 @@ export default function Projects() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="text-3xl font-semibold mb-4 text-center">Mes Projets</h3>
-      <br>
-
-      </br>
-      <br>
-
-      </br>
+      <h3 className="text-3xl font-semibold mb-4 text-center mb-15">Mes Projets</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
           <h4 className="text-lg font-bold mb-2">Site vitrine</h4>

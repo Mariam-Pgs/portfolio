@@ -28,7 +28,7 @@ export default function About() {
      }}
    >
 <section id="about" className="min-h-[100dvh] flex flex-col justify-center items-center px-4 py-16">
- <h2 className="text-3xl font-semibold mb-4">À propos</h2>
+ <h2 className="text-3xl font-semibold mb-15">À propos</h2>
  <p className="mb-6">
    Étudiante en BUT Informatique passionnée par le développement web et le design UX/UI, je suis actuellement à la recherche d’une alternance dans le développement front-end à partir de septembre 2025.
  </p>

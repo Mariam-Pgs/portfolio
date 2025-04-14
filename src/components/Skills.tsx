@@ -4,7 +4,7 @@ import { JSX } from "react";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaFigma, FaPhp } from "react-icons/fa";
-import { SiCplusplus, SiTypescript, SiMysql, SiCanva, SiClickup, SiAirtable, SiWordpress } from "react-icons/si";
+import { SiCplusplus, SiTypescript, SiMysql, SiCanva, } from "react-icons/si";
 
 export default function Skills() {
   const ref = useRef(null);
@@ -54,9 +54,6 @@ export default function Skills() {
           <SkillBox icon={<FaGithub />} label="GitHub" />
           <SkillBox icon={<FaGitAlt />} label="Git" />
           <SkillBox icon={<SiCanva />} label="Canva" />
-          <SkillBox icon={<SiClickup />} label="ClickUp" />
-          <SkillBox icon={<SiAirtable />} label="Airtable" />
-          <SkillBox icon={<SiWordpress />} label="WordPress" />
         </div>
       </div>
     </motion.section>

@@ -16,9 +16,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <div className="h-12 bg-gradient-to-b from-white to-gray-100"></div>
       <Skills />
+      <div className="h-12 bg-gradient-to-b from-gray-100 to-white"></div>
       <Projects />
+      <div className="h-12 bg-gradient-to-b from-white to-gray-100"></div>
       <Contact />
+      <div className="h-12 bg-gradient-to-b from-gray-100 to-white"></div>
       <ScrollToTop />
       <Footer />
     </>

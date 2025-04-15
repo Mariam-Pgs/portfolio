@@ -17,7 +17,7 @@ export default function Navbar() {
   className="text-xl font-bold cursor-pointer hover:text-purple-600 hover:drop-shadow-[0_0_15px_rgba(147,51,234,0.8)] transition duration-300"
   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 >
-  Mariam Poghossian
+  Mariam Pgs
 </h1>
       <ul className="flex gap-6 text-sm">
         <li><a href="#about" onClick={(e) => handleScroll(e, "about")} className="hover:text-purple-600">À propos</a></li>

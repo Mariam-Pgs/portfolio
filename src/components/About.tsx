@@ -42,7 +42,7 @@ export default function About() {
         <h3 className="text-3xl font-semibold mb-4 text-center">Formation</h3>
         <ul className="space-y-2 text-center">
           <li>
-            <strong>BUT Informatique</strong> – IUT d'Aix-en-Provence, 2025 – 2027
+            <strong>BUT Informatique</strong> – IUT d\'Aix-en-Provence, 2025 – 2027
           </li>
           <li>
             <strong>Baccalauréat Technologique</strong> – Lycée Jean Perrin Marseille – Spécialités STI2D option Systèmes d’Information et Numérique

@@ -1,6 +1,6 @@
 // ✅ src/components/Projects.tsx
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Projects() {

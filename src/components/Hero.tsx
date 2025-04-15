@@ -6,7 +6,7 @@ export default function Hero() {
  return (
    <section className="min-h-[80vh] flex flex-col justify-center items-center text-center bg-gradient-to-b from-purple-100 to-white pt-28 px-4">
      <h1 className="text-4xl md:text-5xl font-bold mb-4 relative hero-title">
-       Bonjour, je suis <span className="underline-animate">Mariam</span> 🫧
+       Bonjour, je suis <span className="underline-animate">Mariam</span> 
      </h1>
      <br>
     

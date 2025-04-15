@@ -3,9 +3,9 @@
 import { JSX } from "react";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaFigma, FaPhp } from "react-icons/fa";
-import { SiCplusplus, SiTypescript, SiMysql, SiCanva, } from "react-icons/si";
-import { FaDatabase, FaStackOverflow } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaGitAlt, FaGithub, FaFigma } from "react-icons/fa";
+import { SiCplusplus, SiTypescript, SiCanva, } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 
 
 export default function Skills() {

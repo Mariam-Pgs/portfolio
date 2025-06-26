@@ -52,7 +52,8 @@ export default function Contact() {
       } else {
         setError("❌ Une erreur s'est produite. Réessaie plus tard.");
       }
-    } catch (error) {
+       } catch (error) {
+      console.error(error);
       setError("❌ Une erreur s'est produite. Vérifie ta connexion.");
     }
   };

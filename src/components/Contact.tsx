@@ -43,7 +43,7 @@ export default function Contact() {
       const result = await res.json();
 
       if (result.ok || res.status === 200) {
-        setSuccess("✅ Merci ! Ton message a bien été envoyé ✉️");
+        setSuccess("Merci ! Votre message a bien été envoyé");
         setName("");
         setEmail("");
         setMessage("");

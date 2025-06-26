@@ -17,18 +17,43 @@ export default function Contact() {
     if (inView) controls.start("visible");
   }, [inView, controls]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!name || !email || !message) {
       setError("🛑 Veuillez remplir tous les champs.");
       setSuccess("");
-    } else {
-      setError("");
-      setSuccess("✅ Merci ! Ton message a bien été envoyé ✉️");
-      setName("");
-      setEmail("");
-      setMessage("");
-      setTimeout(() => setSuccess(""), 3000);
+      return;
+    }
+
+    try {
+      const res = await fetch("https://formspree.io/f/xwpbwgvq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      const result = await res.json();
+
+      if (result.ok || res.status === 200) {
+        setSuccess("✅ Merci ! Ton message a bien été envoyé ✉️");
+        setName("");
+        setEmail("");
+        setMessage("");
+        setError("");
+        setTimeout(() => setSuccess(""), 3000);
+      } else {
+        setError("❌ Une erreur s'est produite. Réessaie plus tard.");
+      }
+    } catch (error) {
+      setError("❌ Une erreur s'est produite. Vérifie ta connexion.");
     }
   };
 
@@ -48,7 +73,7 @@ export default function Contact() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-<h3 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1.5rem" }}>Contact</h3>
+      <h3 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1.5rem" }}>Contact</h3>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -60,6 +85,7 @@ export default function Contact() {
         }}
       >
         <input
+          name="name"
           type="text"
           placeholder="Nom"
           value={name}
@@ -67,6 +93,7 @@ export default function Contact() {
           style={inputStyle}
         />
         <input
+          name="email"
           type="email"
           placeholder="Email"
           value={email}
@@ -74,6 +101,7 @@ export default function Contact() {
           style={inputStyle}
         />
         <textarea
+          name="message"
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

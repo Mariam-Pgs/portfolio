@@ -33,7 +33,7 @@ export default function Footer() {
          <FaEnvelope />
        </a>
      </div>
-     <p className="text-center text-sm text-gray-500 mt-4">© 2025 Mariam Poghossian</p>
+     <p className="text-center text-sm text-gray-500 mt-4">© 2025 Mariam POGHOSSIAN - Tous droits réservés</p>
    </footer>
  );
 }

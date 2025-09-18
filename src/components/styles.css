@@ -22,16 +22,15 @@
   }
  
 .hero {
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #f3e8ff, #ffffff); /* bg-gradient-to-b from-purple-100 to-white */
-  padding-top: 7rem; 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background: linear-gradient(to bottom, #f3e8ff, #ffffff); 
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .hero-title {
@@ -131,7 +130,7 @@
   padding: 2.5rem;          
   background-color: #f3f4f6; 
   color: #111827;           
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 3rem;
   text-align: center;
 }
 
@@ -354,18 +353,20 @@
 
 /* Section projets */
 .projects-section {
-  padding: 2.5rem; 
-  max-width: 56rem; 
+  min-height: 100vh;
+  padding: 3rem; 
+  max-width: 50rem; 
+  
   margin-left: auto;
   margin-right: auto;
-  scroll-margin-top: 6rem; 
+  scroll-margin-top: 3rem; 
 }
 
 .projects-title {
   font-size: 1.875rem;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 3rem;
 }
 
 /* Grille projets */

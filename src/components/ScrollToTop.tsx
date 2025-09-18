@@ -1,4 +1,5 @@
 "use client";
+import "./styles.css";
 import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -21,10 +22,10 @@ export default function ScrollToTop() {
     visible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 z-50 p-3 bg-purple-500 text-white rounded-full shadow-lg hover:bg-purple-600 transition"
+        className="scroll-to-top"
         aria-label="Remonter en haut"
       >
-        <FaArrowUp className="text-lg" />
+        <FaArrowUp className="icon" />
       </button>
     )
   );

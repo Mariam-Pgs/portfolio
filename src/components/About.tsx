@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import './styles.css';
 
 export default function About() {
   const ref = useRef(null);
@@ -15,7 +16,7 @@ export default function About() {
     <motion.section
       ref={ref}
       id="about"
-      className="min-h-[100dvh] flex flex-col justify-center items-center px-4 py-16 max-w-4xl mx-auto"
+      className="about-section"
       initial="hidden"
       animate={controls}
       variants={{
@@ -23,24 +24,23 @@ export default function About() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h2 className="text-3xl font-semibold mb-8">À propos</h2>
+      <h2 className="about-title">À propos</h2>
 
-      <div className="max-w-4xl mx-auto px-4">
-
-      <p className="mb-6 text-center text-2xl">
+      <div className="about-content">
+      <p className="about-text">
         Étudiante en BUT Informatique passionnée par le développement web et le design UX/UI, je suis actuellement à la recherche d’une alternance dans le développement front-end à partir de septembre 2025.
       </p>
 
-      <p className="mb-15 text-center text-2xl">
+      <p className="about-text">
         Curieuse, créative et toujours motivée pour apprendre, j&apos;aime concevoir des interfaces modernes, accessibles et centrées sur l’utilisateur.
       </p>
 
       </div>
 
 
-      <div className="mt-6 w-full text-2xl">
-        <h3 className="text-3xl font-semibold mb-4 text-center">Formation</h3>
-        <ul className="space-y-2 text-center">
+      <div className="about-formation">
+        <h3 className="formation-title">Formation</h3>
+        <ul className="formation-list">
           <li>
             <strong>BUT Informatique</strong> – IUT d&apos;Aix-en-Provence, 2025 – 2027
           </li>

@@ -1,4 +1,4 @@
-// src/app/page.tsx
+
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -9,6 +9,7 @@ import Contact from '../components/Contact';
 import ScrollToTop from '../components/ScrollToTop';
 import Footer from '../components/Footer';
 
+import './globals.css';
 
 export default function Home() {
   return (
@@ -16,13 +17,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <div className="h-12 bg-gradient-to-b from-white to-gray-100"></div>
+      <div className="divider white-to-gray"></div>
       <Skills />
-      <div className="h-12 bg-gradient-to-b from-gray-100 to-white"></div>
+      <div className="divider gray-to-white"></div>
       <Projects />
-      <div className="h-12 bg-gradient-to-b from-white to-gray-100"></div>
+      <div className="divider white-to-gray"></div>
       <Contact />
-      <div className="h-12 bg-gradient-to-b from-gray-100 to-white"></div>
+      <div className="divider gray-to-white"></div>
       <ScrollToTop />
       <Footer />
     </>

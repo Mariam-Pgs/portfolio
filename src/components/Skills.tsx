@@ -1,5 +1,7 @@
 "use client";
 
+import './styles.css';
+
 import { JSX } from "react";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -21,7 +23,7 @@ export default function Skills() {
     <motion.section
       ref={ref}
       id="skills"
-      className="p-10 bg-gray-100 text-gray-900 scroll-mt-20"
+      className="skills-section"
       initial="hidden"
       animate={controls}
       variants={{
@@ -33,8 +35,8 @@ export default function Skills() {
 
       {/* Langages que j'utilise */}
       <div className="mb-15">       {/* espacement entre section languages et section outils */}
-        <h4 className="text-xl font-semibold mb-8 text-center">💻 Langages que j’utilise</h4>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <h4 className="skills-subtitle">💻 Langages que j’utilise</h4>
+        <div className="skills-grid">
           <SkillBox icon={<FaHtml5 />} label="HTML" />
           <SkillBox icon={<FaCss3Alt />} label="CSS" />
           <SkillBox icon={<FaJs />} label="JavaScript" />
@@ -50,8 +52,8 @@ export default function Skills() {
 
       {/* Outils que j’utilise */}
       <div>
-        <h4 className="text-xl font-semibold mb-8 text-center">🛠️ Outils que j’utilise</h4>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <h4 className="skills-subtitle">🛠️ Outils que j’utilise</h4>
+        <div className="skills-grid">
           <SkillBox icon={<FaFigma />} label="Figma" />
           <SkillBox icon={<FaGithub />} label="GitHub" />
           <SkillBox icon={<FaGitAlt />} label="Git" />
@@ -64,9 +66,9 @@ export default function Skills() {
 
 function SkillBox({ icon, label }: { icon: JSX.Element; label: string }) {
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow p-4 hover:shadow-md transition">
-      <div className="text-3xl mb-2 text-purple-600">{icon}</div>
-      <p className="text-sm font-medium">{label}</p>
+    <div className="skill-box">
+      <div className="skill-icon">{icon}</div>
+      <p className="skill-label">{label}</p>
     </div>
   );
 }

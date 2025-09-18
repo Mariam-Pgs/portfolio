@@ -1,5 +1,6 @@
 // ✅ src/components/Projects.tsx
 "use client";
+import "./styles.css";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -18,7 +19,7 @@ export default function Projects() {
     <motion.section
       ref={ref}
       id="projects"
-      className="p-10 max-w-4xl mx-auto scroll-mt-24"
+      className="projects-section"
       initial="hidden"
       animate={controls}
       variants={{
@@ -26,31 +27,33 @@ export default function Projects() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 className="text-3xl font-semibold mb-4 text-center mb-15">Mes Projets</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Site vitrine</h4>
-          <p className="text-sm text-gray-600">Création de pages web en HTML, CSS, JavaScript</p>
+      <h3 className="projects-title">Mes Projets</h3>
+
+      <div className="projects-grid">
+
+        <div className="project-card">
+          <h4 className="project-title">Site vitrine</h4>
+          <p className="project-text">Création de pages web en HTML, CSS, JavaScript</p>
         </div>
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Jeu d’échecs en Java</h4>
-          <p className="text-sm text-gray-600">Programmation orientée objet et logique de jeu</p>
+        <div className="project-card">
+          <h4 className="project-title">Jeu d’échecs en Java</h4>
+          <p className="project-text">Programmation orientée objet et logique de jeu</p>
         </div>
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Système de vote (C++)</h4>
-          <p className="text-sm text-gray-600">Développement complet d’un système de vote</p>
+        <div className="project-card">
+          <h4 className="project-title">Système de vote (C++)</h4>
+          <p className="project-text">Développement complet d’un système de vote</p>
         </div>
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Messagerie locale</h4>
-          <p className="text-sm text-gray-600">Création d’une interface utilisateur et communication simulée</p>
+        <div className="project-card">
+          <h4 className="project-title">Messagerie locale</h4>
+          <p className="project-text">Création d’une interface utilisateur et communication simulée</p>
         </div>
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Base de données SQL</h4>
-          <p className="text-sm text-gray-600">Modélisation (MCD, MLD) et requêtes SQL avancées</p>
+        <div className="project-card">
+          <h4 className="project-title">Base de données SQL</h4>
+          <p className="project-text">Modélisation (MCD, MLD) et requêtes SQL avancées</p>
         </div>
-        <div className="border rounded-xl p-4 shadow hover:shadow-lg transition">
-          <h4 className="text-lg font-bold mb-2">Installation de VM</h4>
-          <p className="text-sm text-gray-600">Utilisation de VirtualBox, dual boot, partitionnement disque</p>
+        <div className="project-card">
+          <h4 className="project-title">Installation de VM</h4>
+          <p className="project-text">Utilisation de VirtualBox, dual boot, partitionnement disque</p>
         </div>
       </div>
     </motion.section>

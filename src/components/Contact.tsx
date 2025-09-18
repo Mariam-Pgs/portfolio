@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
+import "./styles.css";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -33,11 +34,7 @@ export default function Contact() {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-        }),
+        body: JSON.stringify({ name, email, message }),
       });
 
       const result = await res.json();
@@ -52,7 +49,7 @@ export default function Contact() {
       } else {
         setError("❌ Une erreur s'est produite. Réessaie plus tard.");
       }
-       } catch (error) {
+    } catch (error) {
       console.error(error);
       setError("❌ Une erreur s'est produite. Vérifie ta connexion.");
     }
@@ -62,11 +59,7 @@ export default function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      style={{
-        padding: "4rem 2rem",
-        backgroundColor: "#f5f5f5",
-        textAlign: "center",
-      }}
+      className="contact-section"
       initial="hidden"
       animate={controls}
       variants={{
@@ -74,24 +67,15 @@ export default function Contact() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <h3 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1.5rem" }}>Contact</h3>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-          maxWidth: "500px",
-          margin: "0 auto",
-        }}
-      >
+      <h3 className="contact-title">Contact</h3>
+      <form onSubmit={handleSubmit} className="contact-form">
         <input
           name="name"
           type="text"
           placeholder="Nom"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          style={inputStyle}
+          className="contact-input"
         />
         <input
           name="email"
@@ -99,23 +83,21 @@ export default function Contact() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={inputStyle}
+          className="contact-input"
         />
         <textarea
           name="message"
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          style={{ ...inputStyle, minHeight: "100px", resize: "vertical" }}
+          className="contact-textarea"
         />
-        {error && (
-          <p style={{ color: "red", fontSize: "0.9rem" }}>{error}</p>
-        )}
+        {error && <p className="contact-error">{error}</p>}
         <AnimatePresence>
           {success && (
             <motion.p
               key="success"
-              style={{ color: "green", fontSize: "0.9rem", fontWeight: 500 }}
+              className="contact-success"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -125,30 +107,10 @@ export default function Contact() {
             </motion.p>
           )}
         </AnimatePresence>
-        <button
-          type="submit"
-          style={{
-            backgroundColor: "#9333ea",
-            color: "white",
-            padding: "0.8rem",
-            border: "none",
-            borderRadius: "8px",
-            fontSize: "1rem",
-            cursor: "pointer",
-          }}
-        >
+        <button type="submit" className="contact-button">
           Envoyer
         </button>
       </form>
     </motion.section>
   );
 }
-
-const inputStyle = {
-  width: "100%",
-  padding: "0.8rem",
-  border: "1px solid #ccc",
-  borderRadius: "8px",
-  fontSize: "1rem",
-  fontFamily: "inherit",
-};
